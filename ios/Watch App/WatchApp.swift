@@ -10,9 +10,10 @@ import WatchView
 
 @main
 struct Watch_Watch_AppApp: App {
+    @WKApplicationDelegateAdaptor var appDelegate: WKAppDelegate
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView(resolver: appDelegate.container)
         }
     }
 }

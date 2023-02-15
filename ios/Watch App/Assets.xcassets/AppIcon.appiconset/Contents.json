@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "EV_watch_icon.png",
       "idiom" : "universal",
       "platform" : "watchos",
       "size" : "1024x1024"

@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		500C8C762995E21900790918 /* SomeApp in Frameworks */ = {isa = PBXBuildFile; productRef = 500C8C752995E21900790918 /* SomeApp */; };
-		500C8C772995E21900790918 /* SomeApp in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 500C8C752995E21900790918 /* SomeApp */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		500062D5299C8B6C0044F231 /* UseCase in Frameworks */ = {isa = PBXBuildFile; productRef = 500062D4299C8B6C0044F231 /* UseCase */; };
 		504458722995F33B001A8776 /* WatchView in Frameworks */ = {isa = PBXBuildFile; productRef = 504458712995F33B001A8776 /* WatchView */; };
 		504458732995F33B001A8776 /* WatchView in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 504458712995F33B001A8776 /* WatchView */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5044587929963C12001A8776 /* WKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5044587829963C12001A8776 /* WKAppDelegate.swift */; };
+		5044587B299640AB001A8776 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5044587A299640AB001A8776 /* Swinject */; };
+		50445885299646E8001A8776 /* Infra in Frameworks */ = {isa = PBXBuildFile; productRef = 50445884299646E8001A8776 /* Infra */; };
 		50ECE8522995EE4000BDA8D4 /* WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ECE8512995EE4000BDA8D4 /* WatchApp.swift */; };
-		50ECE8542995EE4000BDA8D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ECE8532995EE4000BDA8D4 /* ContentView.swift */; };
 		50ECE8562995EE4200BDA8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50ECE8552995EE4200BDA8D4 /* Assets.xcassets */; };
 		50ECE8592995EE4200BDA8D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50ECE8582995EE4200BDA8D4 /* Preview Assets.xcassets */; };
 		50ECE8632995EE4200BDA8D4 /* Watch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ECE8622995EE4200BDA8D4 /* Watch_Watch_AppTests.swift */; };
@@ -61,7 +62,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				500C8C772995E21900790918 /* SomeApp in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,9 +72,9 @@
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		5044587829963C12001A8776 /* WKAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKAppDelegate.swift; sourceTree = "<group>"; };
 		50ECE84F2995EE4000BDA8D4 /* Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ECE8512995EE4000BDA8D4 /* WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchApp.swift; sourceTree = "<group>"; };
-		50ECE8532995EE4000BDA8D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50ECE8552995EE4200BDA8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50ECE8582995EE4200BDA8D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50ECE85E2995EE4200BDA8D4 /* Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500062D5299C8B6C0044F231 /* UseCase in Frameworks */,
+				50445885299646E8001A8776 /* Infra in Frameworks */,
 				504458722995F33B001A8776 /* WatchView in Frameworks */,
+				5044587B299640AB001A8776 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500C8C762995E21900790918 /* SomeApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				50ECE8512995EE4000BDA8D4 /* WatchApp.swift */,
-				50ECE8532995EE4000BDA8D4 /* ContentView.swift */,
 				50ECE8552995EE4200BDA8D4 /* Assets.xcassets */,
 				50ECE8572995EE4200BDA8D4 /* Preview Content */,
+				5044587829963C12001A8776 /* WKAppDelegate.swift */,
 			);
 			path = "Watch App";
 			sourceTree = "<group>";
@@ -240,6 +242,9 @@
 			name = "Watch App";
 			packageProductDependencies = (
 				504458712995F33B001A8776 /* WatchView */,
+				5044587A299640AB001A8776 /* Swinject */,
+				50445884299646E8001A8776 /* Infra */,
+				500062D4299C8B6C0044F231 /* UseCase */,
 			);
 			productName = "Watch Watch App";
 			productReference = 50ECE84F2995EE4000BDA8D4 /* Watch App.app */;
@@ -298,7 +303,6 @@
 			);
 			name = Runner;
 			packageProductDependencies = (
-				500C8C752995E21900790918 /* SomeApp */,
 			);
 			productName = Runner;
 			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
@@ -341,6 +345,7 @@
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
 			packageReferences = (
+				5044587529963B72001A8776 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
 			projectDirPath = "";
@@ -427,7 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50ECE8542995EE4000BDA8D4 /* ContentView.swift in Sources */,
+				5044587929963C12001A8776 /* WKAppDelegate.swift in Sources */,
 				50ECE8522995EE4000BDA8D4 /* WatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1075,14 +1080,34 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		5044587529963B72001A8776 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		500C8C752995E21900790918 /* SomeApp */ = {
+		500062D4299C8B6C0044F231 /* UseCase */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SomeApp;
+			productName = UseCase;
 		};
 		504458712995F33B001A8776 /* WatchView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WatchView;
+		};
+		5044587A299640AB001A8776 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5044587529963B72001A8776 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		50445884299646E8001A8776 /* Infra */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Infra;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

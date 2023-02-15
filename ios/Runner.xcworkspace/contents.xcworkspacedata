@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Infra">
+   </FileRef>
+   <FileRef
       location = "group:UseCase">
    </FileRef>
    <FileRef
       location = "group:WatchView">
-   </FileRef>
-   <FileRef
-      location = "group:SomeApp">
    </FileRef>
    <FileRef
       location = "group:Runner.xcodeproj">

@@ -6,33 +6,26 @@
 //
 
 import SwiftUI
+import Swinject
 import UseCase
 
 public struct RootView: View {
 
-    var usecase: DashboardUseCase.ObservableObject!
+    let resolver: Resolver
 
     public var body: some View {
-        VStack(spacing: 16) {
-            Text("Hello, Packages!")
-                .font(.title2)
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-            Button {
-                print("tapped!")
-            } label: {
-                Text("Tap me")
-            }
-            .padding(.horizontal, 16)
-
-        }
+        resolver.build(ContentsView.self).with(())
     }
 
-    public init() {}
+    public init(resolver: Resolver) {
+        self.resolver = resolver
+    }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+
+        let container = Container()
+        RootView(resolver: container)
     }
 }
