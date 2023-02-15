@@ -13,12 +13,13 @@ public class LocalUserDefaults: LocalStorage {
     private let userDefaults: UserDefaults
 
     public var userId: String? {
-        get {
-            userDefaults.string(forKey: "userId")
-        }
-        set(value) {
-            userDefaults.set(value, forKey: "userId")
-        }
+        get { userDefaults.string(forKey: "userId") }
+        set(value) { userDefaults.set(value, forKey: "userId") }
+    }
+
+    public var count: Int? {
+        get { userDefaults.integer(forKey: "count") }
+        set(value) { userDefaults.set(value, forKey: "count") }
     }
 
     public init(userDefaults: UserDefaults) {

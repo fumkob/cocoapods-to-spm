@@ -11,6 +11,7 @@ import Swinject
 
 public struct Dashboard: Equatable {
     public var userId: String?
+    public var count: Int?
 }
 
 public enum DashboardCommand: Command {
@@ -30,8 +31,18 @@ public extension DashboardUseCase {
             let localStorage = resolver.resolve(LocalStorage.self)
             return .onReceive {
                 switch $0 {
-                case .read: store.update { $0.userId = localStorage?.userId }
-                case let .save(userId): localStorage?.userId = userId
+                case .read:
+                    store.update {
+                        $0.userId = localStorage?.userId
+                        $0.count = localStorage?.count
+                    }
+                case let .save(userId):
+                    localStorage?.userId = userId
+                    if let initialCount = localStorage?.count {
+                        localStorage?.count = initialCount + 1
+                    } else {
+                        localStorage?.count = 1
+                    }
                 }
             }
         }

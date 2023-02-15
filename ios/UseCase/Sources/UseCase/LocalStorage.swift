@@ -9,4 +9,5 @@ import Foundation
 
 public protocol LocalStorage: AnyObject {
     var userId: String? { get  set }
+    var count: Int? { get set }
 }

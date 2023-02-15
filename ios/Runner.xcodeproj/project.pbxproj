@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		500062D5299C8B6C0044F231 /* UseCase in Frameworks */ = {isa = PBXBuildFile; productRef = 500062D4299C8B6C0044F231 /* UseCase */; };
 		504458722995F33B001A8776 /* WatchView in Frameworks */ = {isa = PBXBuildFile; productRef = 504458712995F33B001A8776 /* WatchView */; };
 		504458732995F33B001A8776 /* WatchView in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 504458712995F33B001A8776 /* WatchView */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5044587929963C12001A8776 /* WKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5044587829963C12001A8776 /* WKAppDelegate.swift */; };
 		5044587B299640AB001A8776 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5044587A299640AB001A8776 /* Swinject */; };
 		50445885299646E8001A8776 /* Infra in Frameworks */ = {isa = PBXBuildFile; productRef = 50445884299646E8001A8776 /* Infra */; };
+		50855861299CCBBF00C89CCB /* UseCase in Frameworks */ = {isa = PBXBuildFile; productRef = 50855860299CCBBF00C89CCB /* UseCase */; };
 		50ECE8522995EE4000BDA8D4 /* WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ECE8512995EE4000BDA8D4 /* WatchApp.swift */; };
 		50ECE8562995EE4200BDA8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50ECE8552995EE4200BDA8D4 /* Assets.xcassets */; };
 		50ECE8592995EE4200BDA8D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50ECE8582995EE4200BDA8D4 /* Preview Assets.xcassets */; };
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500062D5299C8B6C0044F231 /* UseCase in Frameworks */,
+				50855861299CCBBF00C89CCB /* UseCase in Frameworks */,
 				50445885299646E8001A8776 /* Infra in Frameworks */,
 				504458722995F33B001A8776 /* WatchView in Frameworks */,
 				5044587B299640AB001A8776 /* Swinject in Frameworks */,
@@ -244,7 +244,7 @@
 				504458712995F33B001A8776 /* WatchView */,
 				5044587A299640AB001A8776 /* Swinject */,
 				50445884299646E8001A8776 /* Infra */,
-				500062D4299C8B6C0044F231 /* UseCase */,
+				50855860299CCBBF00C89CCB /* UseCase */,
 			);
 			productName = "Watch Watch App";
 			productReference = 50ECE84F2995EE4000BDA8D4 /* Watch App.app */;
@@ -1092,10 +1092,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		500062D4299C8B6C0044F231 /* UseCase */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UseCase;
-		};
 		504458712995F33B001A8776 /* WatchView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WatchView;
@@ -1108,6 +1104,10 @@
 		50445884299646E8001A8776 /* Infra */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Infra;
+		};
+		50855860299CCBBF00C89CCB /* UseCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -13,20 +13,39 @@ public struct ContentsView: View {
     @ObservedObject var usecase: DashboardObject
 
     public var body: some View {
-        VStack(spacing: 16) {
-            Text("Hello, Packages!")
-                .font(.title2)
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-            Button {
-                usecase.dispatch(.save(userId: "Onigiri"))
-            } label: {
-                Text("Tap me")
-            }
-            .padding(.horizontal, 16)
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 8) {
+                    Text("Hello, Packages!")
+                        .font(.title2)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                    Button {
+                        usecase.dispatch(.read)
+                    } label: {
+                        Text("Read")
+                    }
+                    .padding(.horizontal, 16)
 
-            if let userId = usecase.state.userId {
-                Text("UserID: \(userId)")
+                    if let userId = usecase.state.userId,
+                       let count = usecase.state.count {
+                        Text("UserID: \(userId)")
+                        Text("Counter: \(count)")
+                    }
+                    Button {
+                        usecase.dispatch(.save(userId: "Onigiri"))
+                    } label: {
+                        Text("Count up")
+                    }
+                    .padding(.horizontal, 16)
+                    
+                    NavigationLink(destination: {
+                        SecondView()
+                    }, label: {
+                        Text("Navigation Test")
+                    })
+                    .padding(.horizontal, 16)
+                }
             }
         }
     }

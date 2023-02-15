@@ -19,6 +19,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(path: "../UseCase"),
+        .package(url: "https://github.com/crexista/UseCaseKit", branch: "add_adaptor"), // ここでUseCaseKitを呼ばないとBuildできない
         .package(url: "https://github.com/Swinject/Swinject", from: "2.8.3")
     ],
     targets: [
@@ -28,6 +29,7 @@ let package = Package(
             name: "WatchView",
             dependencies: [
                 "UseCase",
+                "UseCaseKit",
                 "Swinject"
             ]),
         .testTarget(
